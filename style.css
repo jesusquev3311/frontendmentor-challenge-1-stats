@@ -38,8 +38,9 @@ h1{
     font-size: 27px;
     line-height: 32px;
     margin-bottom: 25px;
-    font-family: var(--secondary-font);
+    font-family: var(--title-font);
     font-weight: 700;
+    letter-spacing: 2.3px;
 }
 h1 span{
     color: var(--purple);
@@ -50,7 +51,9 @@ h1 span{
 p{
     font-size: 15px;
     line-height: 26px;
-    margin-bottom: 48px;
+    margin-bottom: 28px;
+    font-weight: 100;
+    font-family: var(--title-font);
 }
 .banner{
     position: relative;
@@ -70,4 +73,89 @@ p{
     width: 100%;
     max-height: 242px;
     object-fit: cover;
+}
+
+.text-wrapper--botom-text .col-3{
+    margin-bottom: 30px;
+}
+
+.text-wrapper--bottom-text__number{
+    font-size: 20px;
+    line-height: 33px;
+    font-family: var(--title-font);
+}
+
+.text-wrapper--botom-text__title{
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+}
+
+/* ========= Responsive ========= */
+
+/* small and medium tablet 720px */
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+    
+    .card{
+        max-width: 600px;
+    }
+    .banner, .banner img{
+        max-height: 400px;
+    }
+
+    p{
+        font-size: 17px;
+        line-height: 28px;
+    }
+    .text-wrapper--botom-text{
+        margin-bottom: 45px;
+    }
+    .text-wrapper--botom-text .row{
+        flex-direction: row;
+    }
+    .text-wrapper--botom-text .col-3{
+        flex: 33.33%;
+        margin: 0 15px;
+        padding: 0 15px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    
+    .card{
+        max-width: 987px;
+        max-height: 398px;
+    }
+    .row{
+        flex-direction: row;
+        align-items: center;
+    }
+    .col-5{
+        flex: 50%;
+    }
+    .banner, .banner img{
+        max-height:100%;
+        height:100%;
+    }
+    .text-wrapper{
+        text-align: left;
+        padding: 0 104px 0 60px;
+    }
+
+    p{
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .text-wrapper--botom-text{
+        margin-bottom: 45px;
+    }
+    .text-wrapper--botom-text .row{
+        text-align: left;
+    }
+    .text-wrapper--botom-text .col-3{
+        flex: 33.33%;
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
 }
